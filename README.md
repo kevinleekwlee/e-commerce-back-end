@@ -23,7 +23,3 @@ npm start
 ```
 
 Video demo: 
-
-Below is a screenshot of the website. 
-
-![alt text](images/screenshot.png)
