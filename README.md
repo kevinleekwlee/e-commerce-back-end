@@ -1,18 +1,29 @@
-# E-commerce Back End Starter Code
+# E-Commerce Back End
 
-# Questions for Tutor
+## Description
+This repository contains back end I built to support an e-commerce site. In this challenge, I was given working Express.js API and was tasked to configure it to use Sequelize to interact with a MySQL database.  
 
-* Object Relational Mapping (ORM)
-* Express.js API
-* Sequelize
-* MySQL
-* API Get, Post, Put, and Delete
-* dotenv
-* associations: one to one, one to many, many to many
-* RESTful
-* CRUD
-* Chapter 14 (Until Section 6)
-    * Model View Controller (MVC)
-    * Separation of concerns
-    * Template Engine
-    * Handlebars.js
+## Usage
+
+Through the terminal, install the required tools using the following: 
+
+```
+npm i
+```
+Through the terminal, seed the database using the following: 
+
+```
+npm run seed
+```
+
+Through the terminal, initialize the application using the following:
+
+```
+npm start
+```
+
+Video demo: 
+
+Below is a screenshot of the website. 
+
+![alt text](images/screenshot.png)
