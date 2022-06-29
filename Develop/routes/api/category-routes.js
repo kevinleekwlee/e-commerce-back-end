@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     const categoriesData = await Category.findAll({
       include: [{ model: Product }]  
     });
-    console.log("categoriesData",categoriesData);
     res.status(200).json(categoriesData);
   } catch (err) {
     res.status(500).json(err);
@@ -69,14 +68,12 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try {
-    console.log(req.params.id);
     const singleCategoryData = await Category.destroy({
       where: {
         id: req.params.id,
       },
     });
 
-    console.log(singleCategoryData);
     if (!singleCategoryData) {
       res.status(404).json({ message: 'This category ID does not exist!' });
       return;
@@ -84,7 +81,6 @@ router.delete('/:id', async (req, res) => {
 
     res.status(200).json(singleCategoryData);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
