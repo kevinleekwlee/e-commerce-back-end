@@ -22,4 +22,4 @@ Through the terminal, initialize the application using the following:
 npm start
 ```
 
-Video demo: 
+Video demo: https://drive.google.com/file/d/1lwNAdIEegKzFlm6SdI6knF5RCZFyCJoY/view?usp=sharing
