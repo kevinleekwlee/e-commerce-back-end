@@ -49,7 +49,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   try {
-    const singleCategoryData = await Category.update({
+    const singleCategoryData = await Category.update(req.body,{
       where: {
         id: req.params.id,
       },
@@ -69,12 +69,14 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try {
+    console.log(req.params.id);
     const singleCategoryData = await Category.destroy({
       where: {
         id: req.params.id,
       },
     });
 
+    console.log(singleCategoryData);
     if (!singleCategoryData) {
       res.status(404).json({ message: 'This category ID does not exist!' });
       return;
@@ -82,6 +84,7 @@ router.delete('/:id', async (req, res) => {
 
     res.status(200).json(singleCategoryData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
